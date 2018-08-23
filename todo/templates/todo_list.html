@@ -1,4 +1,4 @@
-<!doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
     </head>
@@ -12,10 +12,12 @@
                 {% else %}
                 <td>{{ item.name }}</td>
                 {% endif %}
+                <td><form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form></td>
             </tr>
             {% empty %}
             <p>You have nothing else to do.</p>
             {% endfor %}
         </table>
+        <a href="add">Add to do</a>
     </body>
 </html>
